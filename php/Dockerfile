@@ -10,6 +10,7 @@ RUN wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 RUN rpm -Uvh remi-release-6*.rpm
 RUN yum update -y
 RUN yum --enablerepo=remi-php71 install -y \
+        git \
         php \
         php-pecl-apcu \
         php-gd \
