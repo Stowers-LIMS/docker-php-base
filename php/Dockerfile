@@ -20,6 +20,7 @@ RUN yum --enablerepo=remi-php71 install -y \
         php-mcrypt \
         php-mssql \
         php-mysqlnd \
+        php-opcache \
         php-pecl-memcached \
         php-pecl-zip \
         php-xml \
