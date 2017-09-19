@@ -1,6 +1,6 @@
 FROM centos:6
 
-MAINTAINER Eric Poe <eric.poe@gmail.com>
+LABEL maintainer="eric.poe@gmail.com"
 
 # Set TERM environment var - so terminal cmds like `top` work
 ENV TERM=xterm
