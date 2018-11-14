@@ -12,7 +12,7 @@ RUN yum update -y
 RUN yum --enablerepo=remi-php71 install -y \
         git \
         php \
-        php-pecl-apcu \
+        php-bcmath \
         php-gd \
         php-imap \
         php-intl \
@@ -22,6 +22,7 @@ RUN yum --enablerepo=remi-php71 install -y \
         php-mssql \
         php-mysqlnd \
         php-opcache \
+        php-pecl-apcu \
         php-pecl-memcached \
         php-pecl-zip \
         php-xml \
