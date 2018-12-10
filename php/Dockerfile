@@ -9,7 +9,7 @@ RUN yum install -y wget epel-release
 RUN wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 RUN rpm -Uvh remi-release-6*.rpm
 RUN yum update -y
-RUN yum --enablerepo=remi-php72 install -y \
+RUN yum --enablerepo=remi-php73 install -y \
         git \
         php \
         php-bcmath \
