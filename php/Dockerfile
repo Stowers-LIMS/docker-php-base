@@ -5,7 +5,7 @@ LABEL maintainer="eric.poe@gmail.com"
 # Set TERM environment var - so terminal cmds like `top` work
 ENV TERM=xterm
 
-RUN yum install -y wget epel-release \
+RUN yum install -y epel-release \
         http://rpms.famillecollet.com/enterprise/remi-release-6.rpm \
         http://repo.okay.com.mx/centos/6/x86_64/release/okay-release-1-1.noarch.rpm \
         && \
