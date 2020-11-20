@@ -5,11 +5,14 @@ LABEL maintainer="eric.poe@gmail.com"
 # Set TERM environment var - so terminal cmds like `top` work
 ENV TERM=xterm
 
-RUN yum install -y wget epel-release
-RUN wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
-RUN rpm -Uvh remi-release-6*.rpm
-RUN yum update -y
-RUN yum --enablerepo=remi-php72 install -y \
+RUN yum install -y epel-release \
+        http://rpms.famillecollet.com/enterprise/remi-release-6.rpm \
+        http://repo.okay.com.mx/centos/6/x86_64/release/okay-release-1-1.noarch.rpm \
+        && \
+    yum clean all
+
+RUN yum update -y \
+    && yum --enablerepo=remi-php71 install -y \
         git \
         php \
         php-bcmath \
