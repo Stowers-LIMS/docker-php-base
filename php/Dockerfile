@@ -1,4 +1,4 @@
-FROM centos:6
+FROM centos:7
 
 LABEL maintainer="eric.poe@gmail.com"
 
@@ -6,13 +6,12 @@ LABEL maintainer="eric.poe@gmail.com"
 ENV TERM=xterm
 
 RUN yum install -y epel-release \
-        http://rpms.famillecollet.com/enterprise/remi-release-6.rpm \
-        http://repo.okay.com.mx/centos/6/x86_64/release/okay-release-1-1.noarch.rpm \
+        http://rpms.famillecollet.com/enterprise/remi-release-7.rpm \
         && \
     yum clean all
 
 RUN yum update -y \
-    && yum --enablerepo=remi-php71 install -y \
+    && yum --enablerepo=remi-php74 install -y \
         git \
         php \
         php-bcmath \
