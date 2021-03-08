@@ -1,7 +1,5 @@
 FROM centos:7
 
-LABEL maintainer="eric.poe@gmail.com"
-
 # Set TERM environment var - so terminal cmds like `top` work
 ENV TERM=xterm
 
