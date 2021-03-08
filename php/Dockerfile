@@ -9,7 +9,8 @@ RUN yum install -y epel-release \
     yum clean all
 
 RUN yum update -y \
-    && yum --enablerepo=remi-php71 install -y \
+    && \
+    yum --enablerepo=remi-php71 install -y \
         git \
         php \
         php-bcmath \
