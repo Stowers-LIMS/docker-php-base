@@ -5,7 +5,6 @@ ENV TERM=xterm
 
 RUN yum install -y epel-release \
         http://rpms.famillecollet.com/enterprise/remi-release-7.rpm \
-        http://repo.okay.com.mx/centos/7/x86_64/release/okay-release-1-1.noarch.rpm \
         && \
     yum clean all
 
