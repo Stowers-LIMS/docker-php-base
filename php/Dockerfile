@@ -3,7 +3,8 @@ FROM centos:7
 # Set TERM environment var - so terminal cmds like `top` work
 ENV TERM=xterm
 
-RUN yum install -y epel-release \
+RUN yum install -y \
+        epel-release \
         http://rpms.famillecollet.com/enterprise/remi-release-7.rpm \
         && \
     yum clean all
